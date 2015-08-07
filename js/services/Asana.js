@@ -50,7 +50,10 @@ define(['jquery', 'Service'], function ($, Service) {
                 type : 'POST',
                 success : function (response) {
                     self.tokens.access = response.access_token;
-                    self.tokens.refresh = response.refresh_token;
+
+                    if (response.refresh_token) {
+                        self.tokens.refresh = response.refresh_token;
+                    }
 
                     self.save();
 
