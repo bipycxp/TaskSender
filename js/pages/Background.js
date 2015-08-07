@@ -126,14 +126,7 @@ define(['jquery', 'allServices'], function ($, allServices) {
             var text;
 
             if (message.update) {
-                chrome.notifications.update(
-                    message.taskId,
-                    {
-                        title   : message.title,
-                        //iconUrl : '/img/icons/' + message.color + 'Message.png',
-                        iconUrl : '/img/icons/128.png'
-                    }
-                );
+                chrome.notifications.clear(message.taskId);
             } else {
                 text = message.text.length > 50 ? message.text.substr(0, 50) + '…' : message.text;
 
