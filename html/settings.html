@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+
+    <link type="text/css" rel="stylesheet" media="all" href="../style/semantic.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="../style/settings.css">
+
+    <script src="../js/config.js"></script>
+    <script data-main="settings" src="../js/require.js"></script>
+
+    <script type="text/html" data-template="connectedService">
+        <tr class="service" data-service="{service}">
+            <td>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox">
+                    <label>{service}</label>
+                </div>
+            </td>
+            <td>
+                Send to {sendTo}
+            </td>
+            <td>
+                <div class="ui dropdown">
+                    <img class="ui avatar bordered loading image" src="{user_avatar}">
+                    <div class="menu">
+                        <div class="header">
+                            <i class="user icon"></i>
+                            {user_name}
+                        </div>
+                        <div class="divider"></div>
+                        <div class="item" data-action="disconnect">
+                            <i class="sign out icon"></i>
+                            Disconnect
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </script>
+
+    <script type="text/html" data-template="disconnectedService">
+        <tr class="service" data-service="{service}">
+            <td>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox">
+                    <label>{service}</label>
+                </div>
+            </td>
+            <td>
+                <h5 class="ui red header error">Error. Try again later.</h5>
+            </td>
+            <td>
+                <button class="circular ui icon button" data-action="connect">
+                    <i class="sign in icon"></i>
+                </button>
+            </td>
+        </tr>
+    </script>
+
+    <script type="text/html" data-template="message">
+        <tr data-message="{message}">
+            <td>
+                <div class="ui toggle checkbox">
+                    <input type="checkbox">
+                    <label>{title}</label>
+                </div>
+            </td>
+            <td>
+                <a data-action="testMessage">Example</a>
+            </td>
+        </tr>
+    </script>
+
+</head>
+<body>
+
+<div class="ui grid">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
+
+        <div class="ui grid">
+            <div class="eight wide column">
+                <h1 class="ui header">
+                    <img src="../img/icons/128.png">
+                    <div class="content">
+                        Task Sender
+                        <div class="sub header">Settings manage</div>
+                    </div>
+                </h1>
+            </div>
+            <div class="eight wide column">
+                <div class="shareButtons">
+                    <i class="share vk icon"></i>
+                    <i class="share facebook icon"></i>
+                    <i class="share twitter icon"></i>
+                    <i class="share google plus icon"></i>
+                    <a href="https://github.com/bipycxp/TaskSender" target="_blank">
+                        <i class="share github icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui segment">
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <h2 class="ui dividing header">
+                        Services
+                        <a class="rightSubHeader" data-action="shortcuts">Shortcuts</a>
+                    </h2>
+                    <table class="ui unstackable table services">
+
+                    </table>
+                </div>
+                <div class="eight wide column">
+                    <h2 class="ui dividing header">
+                        Messages
+                    </h2>
+                    <table class="ui unstackable table messages">
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>

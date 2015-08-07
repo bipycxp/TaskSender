@@ -1,0 +1,86 @@
+﻿body {
+    background: #f8f8f8;
+    padding-top: 2%;
+    margin: 0;
+    color: white;
+}
+
+.ui.grid {
+    margin: 0;
+}
+
+.ui.table, .ui.table tr td {
+    border: none;
+}
+
+.ui.table tr td:last-child {
+    text-align: right;
+}
+
+.shareButtons {
+    float: right;
+}
+
+.share {
+    font-size: 20px !important;
+    padding: 20px !important;
+    cursor: pointer;
+    color: rgba(0,0,0,.6);
+}
+
+.service > .image {
+    width: 100px;
+    height: 100px;
+}
+
+.service > .extra.content {
+    border-top: none !important;
+}
+
+.service .error.header {
+    font-weight: normal;
+    display: none;
+}
+
+[data-action] {
+    cursor: pointer;
+}
+
+label {
+    text-transform: capitalize;
+}
+
+.avatar.image {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.button[data-action=connect] {
+    width: 35px !important;
+    height: 35px !important;
+    background: white !important;
+    font-size: 1.2rem !important;
+    padding: 10px !important;
+}
+
+table tr {
+    height: 55px;
+}
+
+.rightSubHeader {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+a[data-action] {
+    color: #57809E;
+}
+
+.ui.toggle.checkbox input:checked~.box:before, .ui.toggle.checkbox input:checked~label:before {
+    background-color: #6694B7;
+}
